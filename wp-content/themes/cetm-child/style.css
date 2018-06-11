@@ -8,9 +8,24 @@ Version: 3.0
 
 /*************** ADD CUSTOM CSS HERE.   ***************/
 
-
+/*.header-search{*/
+    /*display: none !important*/
+/*}*/
+/*.header-nav >.header-divider {*/
+    /*display: none*/
+/*}*/
+/*.cart-item,.account-item {*/
+    /*display: none !important*/
+    /**/
+/*}*/
+.nav>li{
+    margin: 0 30px;
+}
 @media only screen and (max-width: 48em) {
 /*************** ADD MOBILE ONLY CSS HERE  ***************/
 
 
+}
+@media only screen and (max-width: 48em) {
+    /*************** ADD DESKTOP ONLY CSS HERE  ***************/
 }
