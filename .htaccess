@@ -2,11 +2,11 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /cetm-new/
+RewriteBase /cetm/cetmSite/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /cetm-new/index.php [L]
+RewriteRule . /cetm/cetmSite/index.php [L]
 </IfModule>
 
 # END WordPress

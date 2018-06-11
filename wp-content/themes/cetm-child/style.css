@@ -8,9 +8,70 @@ Version: 3.0
 
 /*************** ADD CUSTOM CSS HERE.   ***************/
 
+/*.header-search{*/
+/*display: none !important*/
+/*}*/
+/*.header-nav >.header-divider {*/
+/*display: none*/
+/*}*/
+/*.cart-item,.account-item {*/
+/*display: none !important*/
+/**/
+/*}*/
+.nav > li {
+    margin: 0 20px;
+}
 
-@media only screen and (max-width: 48em) {
-/*************** ADD MOBILE ONLY CSS HERE  ***************/
+@font-face {
+    font-family: helveticaneue;
+    src: url(./style/font/helveticaneue.ttf);
+}
 
+#wrapper {
+    font-family: helveticaneue !important;
+}
 
+.font-helveticaneue {
+    font-family: helveticaneue !important;
+
+}
+
+.nav > li > a {
+    font-family: helveticaneue !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: helveticaneue !important;
+
+}
+
+.project-cetm > .col-inner > .row > .page-col {
+}
+
+.project-cetm > .col-inner > .row > .page-col > .col-inner {
+    background-color: #38373d !important;
+    border-radius: 7px;
+}
+
+@media only screen and (min-width: 850px) {
+    /*************** ADD MOBILE ONLY CSS HERE  ***************/
+    .project-cetm > .col-inner > .row > .page-col {
+        padding: 5px 2px;
+        margin-right: 0px;
+    }
+
+    .project-cetm > .col-inner > .row > .page-col > .col-inner {
+        padding: 10px 5px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    /*************** ADD DESKTOP ONLY CSS HERE  ***************/
+
+    .project-cetm > .col-inner > .row > .page-col {
+        padding: 5px;
+    }
+    .project-cetm > .col-inner > .row > .page-col > .col-inner {
+        padding-top: 5px;
+    }
 }
