@@ -167,7 +167,7 @@ label {
     background-color: #757575; }
 
 .button-primary {
-  background-color: #e57e2f;
+  background-color: #e57e2f !important;
   border-radius: 7px;
   color: #fff;
   text-transform: uppercase;
@@ -177,7 +177,8 @@ label {
   .button-primary img {
     max-width: 20px;
     float: right;
-    margin-left: 10px; }
+    margin-left: 10px;
+    margin-top: 5px; }
   .button-primary:hover {
     opacity: 0.9; }
 
@@ -573,13 +574,65 @@ footer {
     .nav-slider .swiper-slide .content p {
       color: #808080;
       font-family: 'helveticaneuemedium';
-      font-size: 18px; }
+      font-size: 18px;
+      margin: 0; }
   .nav-slider .swiper-slide i {
     position: absolute;
     top: 35px;
     right: 20px; }
     .nav-slider .swiper-slide i img {
       max-width: 30px; }
+
+.related-solution .pt-cv-ifield {
+  position: relative;
+  cursor: pointer; }
+  .related-solution .pt-cv-ifield > a {
+    display: block; }
+  .related-solution .pt-cv-ifield .btn-success {
+    display: none; }
+  .related-solution .pt-cv-ifield .pt-cv-title {
+    text-transform: uppercase;
+    font-family: 'helveticaneuemedium';
+    color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 60px;
+    text-align: center; }
+  .related-solution .pt-cv-ifield a {
+    color: #fff; }
+    .related-solution .pt-cv-ifield a:hover {
+      text-decoration: none; }
+  .related-solution .pt-cv-ifield .pt-cv-content {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 10px;
+    color: #fff;
+    transition: all ease 0.4s; }
+  .related-solution .pt-cv-ifield:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .related-solution .pt-cv-ifield:hover:before {
+    background: #a071ff;
+    background: -moz-linear-gradient(left, #a071ff 0%, #137f99 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #a071ff), color-stop(100%, #137f99));
+    background: -webkit-linear-gradient(left, #a071ff 0%, #137f99 100%);
+    background: -o-linear-gradient(left, #a071ff 0%, #137f99 100%);
+    background: -ms-linear-gradient(left, #a071ff 0%, #137f99 100%);
+    background: linear-gradient(to right, #a071ff 0%, #137f99 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a071ff', endColorstr='#137f99', GradientType=1 );
+    opacity: 0.8; }
+  .related-solution .pt-cv-ifield:hover .pt-cv-content {
+    opacity: 1;
+    bottom: 30px; }
 
 /* Slider */
 .slick-loading .slick-list {
