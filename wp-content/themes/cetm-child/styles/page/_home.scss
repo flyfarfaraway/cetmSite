@@ -88,11 +88,13 @@
 
     .list {
         .item {
-            float: left;
+            display: inline-block;
             width: 16.66666667%;
             transition: all ease-in 0.5s;
             min-height: 400px;
             position: relative;
+            cursor: pointer;
+            background-size: cover;
 
             &.active {
                 width: 33.33333334%;
@@ -341,8 +343,6 @@
 .swiper-container {
     width: 70%;
     height: 600px;
-    // display:inline-block;
-    // vertical-align:top;
     float: left;
     transition: opacity .6s ease, transform .3s ease;
 
@@ -391,9 +391,70 @@
         opacity: 0;
         visibility: hidden;
     }
-}
 
-.swiper-wrapper {
+    .swiper-slide {
+        .content-bg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 100%;
+            color: #595959;
+            text-align: center;
+            padding-bottom: 25px;
+
+            .title {
+                font-size: 36px;
+                font-family: 'helveticaneuelight';
+                text-transform: uppercase;
+                margin-top: 30px;
+                margin-bottom: 10px;
+
+                span {
+                    font-family: 'helveticaneuemedium';
+                }
+            }
+
+            .caption {
+                display: block;
+                font-size: 18px;
+                line-height: 1.4;
+                transform: translateX(50px);
+                opacity: 0;
+                transition: opacity .3s ease, transform .7s ease;
+
+                span {
+                    display: block;
+                    text-align: center;
+                }
+
+                &.show {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+
+            .see-more {
+                color: #555;
+                font-size: 15px;
+                border: 1px solid #b7b7b7;
+                display: inline-block;
+                padding: 8px 27px;
+                border-radius: 30px;
+                background-color: #e1e1e1;
+                margin-top: 20px;
+
+                i {
+                    font-size: 12px;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                    opacity: 0.85;
+                }
+            }
+        }
+    }
 }
 
 .swiper-slide {
@@ -473,7 +534,7 @@
                 color: #808080;
                 font-family: 'helveticaneuemedium';
                 font-size: 18px;
-                margin:0;
+                margin: 0;
             }
         }
 
