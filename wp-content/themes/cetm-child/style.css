@@ -9,39 +9,21 @@ Version: 3.0
 /*************** ADD CUSTOM CSS HERE.   ***************/
 
 /*.header-search{*/
-/*display: none !important*/
+    /*display: none !important*/
 /*}*/
 /*.header-nav >.header-divider {*/
-/*display: none*/
+    /*display: none*/
 /*}*/
 /*.cart-item,.account-item {*/
-/*display: none !important*/
-/**/
+    /*display: none !important*/
+    /**/
 /*}*/
-.nav > li {
-    margin: 0 20px;
+.nav>li{
+    margin: 0 30px;
 }
+@media only screen and (max-width: 48em) {
+/*************** ADD MOBILE ONLY CSS HERE  ***************/
 
-@font-face {
-    font-family: helveticaneue;
-    src: url(./style/font/helveticaneue.ttf);
-}
-
-#wrapper {
-    font-family: helveticaneue !important;
-}
-
-.font-helveticaneue {
-    font-family: helveticaneue !important;
-
-}
-
-.nav > li > a {
-    font-family: helveticaneue !important;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: helveticaneue !important;
 
 }
 

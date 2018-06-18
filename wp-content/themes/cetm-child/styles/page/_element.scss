@@ -1,0 +1,77 @@
+﻿.related-solution {
+    .pt-cv-content-item {
+        padding: 0;
+    }
+
+    .pt-cv-ifield {
+        position: relative;
+        cursor: pointer;
+
+        > a {
+            display: block;
+        }
+
+        .btn-success {
+            display: none;
+        }
+
+        .pt-cv-title {
+            text-transform: uppercase;
+            font-family: 'helveticaneuemedium';
+            color: #fff;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: 60px;
+            text-align: center;
+        }
+
+        a {
+            color: #fff;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .pt-cv-content {
+            display: block;
+            opacity: 0;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            bottom: 10px;
+            color: #fff;
+            transition: all ease 0.4s;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        &:hover {
+            &:before {
+                background: rgba(160,113,255,1);
+                background: -moz-linear-gradient(left, rgba(160,113,255,1) 0%, rgba(19,127,153,1) 100%);
+                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(160,113,255,1)), color-stop(100%, rgba(19,127,153,1)));
+                background: -webkit-linear-gradient(left, rgba(160,113,255,1) 0%, rgba(19,127,153,1) 100%);
+                background: -o-linear-gradient(left, rgba(160,113,255,1) 0%, rgba(19,127,153,1) 100%);
+                background: -ms-linear-gradient(left, rgba(160,113,255,1) 0%, rgba(19,127,153,1) 100%);
+                background: linear-gradient(to right, rgba(160,113,255,1) 0%, rgba(19,127,153,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a071ff', endColorstr='#137f99', GradientType=1 );
+                opacity: 0.8;
+            }
+
+            .pt-cv-content {
+                opacity: 1;
+                bottom: 30px;
+            }
+        }
+    }
+}

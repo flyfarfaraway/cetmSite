@@ -313,11 +313,13 @@ footer {
     margin-bottom: 60px;
     line-height: 23px; }
   .activity .list .item {
-    float: left;
+    display: inline-block;
     width: 16.66666667%;
     transition: all ease-in 0.5s;
     min-height: 400px;
-    position: relative; }
+    position: relative;
+    cursor: pointer;
+    background-size: cover; }
     .activity .list .item.active {
       width: 33.33333334%; }
     .activity .list .item:after {
@@ -518,6 +520,50 @@ footer {
   .swiper-container.loading {
     opacity: 0;
     visibility: hidden; }
+  .swiper-container .swiper-slide .content-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    color: #595959;
+    text-align: center;
+    padding-bottom: 25px; }
+    .swiper-container .swiper-slide .content-bg .title {
+      font-size: 36px;
+      font-family: 'helveticaneuelight';
+      text-transform: uppercase;
+      margin-top: 30px;
+      margin-bottom: 10px; }
+      .swiper-container .swiper-slide .content-bg .title span {
+        font-family: 'helveticaneuemedium'; }
+    .swiper-container .swiper-slide .content-bg .caption {
+      display: block;
+      font-size: 18px;
+      line-height: 1.4;
+      transform: translateX(50px);
+      opacity: 0;
+      transition: opacity .3s ease, transform .7s ease; }
+      .swiper-container .swiper-slide .content-bg .caption span {
+        display: block;
+        text-align: center; }
+      .swiper-container .swiper-slide .content-bg .caption.show {
+        transform: translateX(0);
+        opacity: 1; }
+    .swiper-container .swiper-slide .content-bg .see-more {
+      color: #555;
+      font-size: 15px;
+      border: 1px solid #b7b7b7;
+      display: inline-block;
+      padding: 8px 27px;
+      border-radius: 30px;
+      background-color: #e1e1e1;
+      margin-top: 20px; }
+      .swiper-container .swiper-slide .content-bg .see-more i {
+        font-size: 12px; }
+      .swiper-container .swiper-slide .content-bg .see-more:hover {
+        text-decoration: none;
+        opacity: 0.85; }
 
 .swiper-slide {
   overflow: hidden; }
@@ -582,6 +628,60 @@ footer {
     right: 20px; }
     .nav-slider .swiper-slide i img {
       max-width: 30px; }
+
+.related-solution .pt-cv-content-item {
+  padding: 0; }
+
+.related-solution .pt-cv-ifield {
+  position: relative;
+  cursor: pointer; }
+  .related-solution .pt-cv-ifield > a {
+    display: block; }
+  .related-solution .pt-cv-ifield .btn-success {
+    display: none; }
+  .related-solution .pt-cv-ifield .pt-cv-title {
+    text-transform: uppercase;
+    font-family: 'helveticaneuemedium';
+    color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 60px;
+    text-align: center; }
+  .related-solution .pt-cv-ifield a {
+    color: #fff; }
+    .related-solution .pt-cv-ifield a:hover {
+      text-decoration: none; }
+  .related-solution .pt-cv-ifield .pt-cv-content {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 10px;
+    color: #fff;
+    transition: all ease 0.4s; }
+  .related-solution .pt-cv-ifield:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .related-solution .pt-cv-ifield:hover:before {
+    background: #a071ff;
+    background: -moz-linear-gradient(left, #a071ff 0%, #137f99 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #a071ff), color-stop(100%, #137f99));
+    background: -webkit-linear-gradient(left, #a071ff 0%, #137f99 100%);
+    background: -o-linear-gradient(left, #a071ff 0%, #137f99 100%);
+    background: -ms-linear-gradient(left, #a071ff 0%, #137f99 100%);
+    background: linear-gradient(to right, #a071ff 0%, #137f99 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a071ff', endColorstr='#137f99', GradientType=1 );
+    opacity: 0.8; }
+  .related-solution .pt-cv-ifield:hover .pt-cv-content {
+    opacity: 1;
+    bottom: 30px; }
 
 /* Slider */
 .slick-loading .slick-list {

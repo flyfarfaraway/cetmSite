@@ -1,8 +1,9 @@
 ﻿$(document).ready(function () {
     //init slide
-    initSwiper()
-    slickOnMobile('#activeItem')
-    slickOnMobile('#benefitSlide')
+    initSwiper();
+    slickOnMobile('#activeItem');
+    slickOnMobile('#benefitSlide');
+    initHoverFunction();
 });
 function initSwiper() {
     // Params
@@ -111,4 +112,14 @@ function slickOnMobile(element) {
           },
         ]
     });
+}
+function initHoverFunction() {
+    $("#activeItem .item").hover(
+          function () {
+              $('.item').removeClass('active');
+              $(this).addClass('active');
+          }, function () {
+              $(this).removeClass('active');
+          }
+    );
 }
