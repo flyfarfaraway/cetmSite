@@ -19,6 +19,10 @@
   font-family: 'helveticaneueitalic';
   src: url("../fonts/helveticaneueitalic.ttf") format("truetype"); }
 
+@font-face {
+  font-family: 'utm_beba';
+  src: url("../fonts/UTM Bebas.ttf") format("truetype"); }
+
 html, body {
   font-family: 'helveticaneue';
   color: #646464; }
@@ -148,8 +152,9 @@ label {
   border-bottom: 2px solid #029e3b;
   margin-top: 16px; }
 
-.full-width .ubermenu-nav, .container, .row {
-  max-width: 1300px !important; }
+@media screen and (min-width: 1600px) {
+  .full-width .ubermenu-nav, .container, .row {
+    max-width: 1300px !important; } }
 
 .label-line {
   position: relative;
@@ -181,6 +186,10 @@ label {
     margin-top: 5px; }
   .button-primary:hover {
     opacity: 0.9; }
+
+.font-beba {
+  font-family: 'utm_beba';
+  color: #000; }
 
 footer {
   background-color: #2d2c32;
@@ -682,6 +691,77 @@ footer {
   .related-solution .pt-cv-ifield:hover .pt-cv-content {
     opacity: 1;
     bottom: 30px; }
+
+.round-element {
+  position: relative;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #fff; }
+  .round-element .round-content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.ul-blue {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+  .ul-blue li {
+    display: block;
+    position: relative;
+    padding-left: 19px;
+    font-size: 15px; }
+    .ul-blue li:before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      position: absolute;
+      top: 8px;
+      left: 0;
+      background-color: #02748d; }
+    .ul-blue li span, .ul-blue li a {
+      color: #333;
+      text-decoration: none; }
+      .ul-blue li span:hover, .ul-blue li a:hover {
+        text-decoration: none; }
+  .ul-blue.double-list li {
+    width: 50%;
+    float: left; }
+
+.buble-box {
+  position: relative;
+  background: #88b7d5;
+  text-align: center; }
+  .buble-box:after {
+    bottom: 100%;
+    left: 50px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-bottom-color: #88b7d5;
+    border-width: 9px; }
+  .buble-box.bottom-arrow:after {
+    bottom: 0;
+    top: 100%;
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: #88b7d5;
+    border-width: 9px; }
+  .buble-box.box-border {
+    border-radius: 5px; }
+  .buble-box.arrow-right:after {
+    left: unset;
+    right: 50px; }
+  .buble-box.box-esclip {
+    border-radius: 50%; }
 
 /* Slider */
 .slick-loading .slick-list {
