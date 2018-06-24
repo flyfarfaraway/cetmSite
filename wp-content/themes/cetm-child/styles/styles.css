@@ -189,7 +189,7 @@ label {
 
 .font-beba {
   font-family: 'utm_beba';
-  color: #000; }
+  font-weight: normal; }
 
 footer {
   background-color: #2d2c32;
@@ -762,6 +762,82 @@ footer {
     right: 50px; }
   .buble-box.box-esclip {
     border-radius: 50%; }
+
+a.button {
+  text-decoration: none; }
+
+.mrw-pop .modal-header {
+  border-bottom: 0; }
+
+.mrw-pop .close {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  color: #545454; }
+
+.mrw-pop .modal-title {
+  font-family: 'helveticaneuemedium';
+  color: #545454; }
+
+.mrw-pop .form-group {
+  position: relative; }
+  .mrw-pop .form-group:before {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    font-family: "Font Awesome 5 Free";
+    font-size: 15px;
+    color: #f58220; }
+  .mrw-pop .form-group.name:before {
+    content: "\f007"; }
+  .mrw-pop .form-group.phone:before {
+    content: "\f095";
+    font-weight: 900; }
+  .mrw-pop .form-group.email:before {
+    content: "\f0e0"; }
+  .mrw-pop .form-group.content:before {
+    content: "\f075"; }
+  .mrw-pop .form-group input,
+  .mrw-pop .form-group textarea {
+    width: 100%;
+    height: 34px;
+    border: 1px solid #959595;
+    outline: none !important;
+    transition: all ease 0.3s;
+    padding: 5px 35px;
+    color: #333;
+    box-shadow: none !important; }
+    .mrw-pop .form-group input:focus,
+    .mrw-pop .form-group textarea:focus {
+      border: 1px solid #f58220; }
+  .mrw-pop .form-group textarea {
+    min-height: 250px; }
+  .mrw-pop .form-group select {
+    box-shadow: none !important; }
+
+.mrw-pop .send-btn {
+  display: inline-block;
+  background-color: #f58220;
+  border: 1px solid #f58220;
+  border-radius: 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: 'helveticaneuemedium';
+  padding: 10px 30px;
+  cursor: pointer; }
+  .mrw-pop .send-btn:hover {
+    opacity: 0.85;
+    text-decoration: none; }
+
+.mrw-pop .group-submit {
+  margin-bottom: 30px; }
+
+.img-banner {
+  text-align: center; }
+  .img-banner img {
+    display: inline;
+    max-width: 1000px; }
 
 /* Slider */
 .slick-loading .slick-list {
