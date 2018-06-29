@@ -177,3 +177,103 @@
         border-radius: 50%;
     }
 }
+
+a {
+    &.button {
+        text-decoration: none;
+    }
+}
+
+.mrw-pop {
+    .modal-header {
+        border-bottom: 0;
+    }
+
+    .close {
+        position: absolute;
+        right: 15px;
+        top: 0;
+        color: #545454;
+    }
+
+    .modal-title {
+        font-family: 'helveticaneuemedium';
+        color: #545454;
+    }
+
+    .form-group {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            top: 6px;
+            left: 10px;
+            font-family: "Font Awesome 5 Free";
+            font-size: 15px;
+            color: #f58220;
+        }
+
+        &.name:before {
+            content: "\f007";
+        }
+
+        &.phone:before {
+            content: "\f095";
+            font-weight: 900;
+        }
+
+        &.email:before {
+            content: "\f0e0";
+        }
+
+        &.content:before {
+            content: "\f075";
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            height: 34px;
+            border: 1px solid #959595;
+            outline: none !important;
+            transition: all ease 0.3s;
+            padding: 5px 35px;
+            color: #333;
+            box-shadow: none !important;
+
+            &:focus {
+                border: 1px solid #f58220;
+            }
+        }
+
+        textarea {
+            min-height: 250px;
+        }
+
+        select {
+            box-shadow: none !important;
+        }
+    }
+
+    .send-btn {
+        display: inline-block;
+        background-color: #f58220;
+        border: 1px solid #f58220;
+        border-radius: 0;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-family: 'helveticaneuemedium';
+        padding: 10px 30px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.85;
+            text-decoration: none;
+        }
+    }
+
+    .group-submit {
+        margin-bottom: 30px;
+    }
+}
