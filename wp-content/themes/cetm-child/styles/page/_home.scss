@@ -5,7 +5,7 @@
     color: #fff;
 
     h3 {
-        font-family: 'helveticaneuemedium';
+        font-family: 'helveticaneuemedium' !important;
     }
 
     .intro {
@@ -36,7 +36,7 @@
             }
 
             span {
-                font-family: 'helveticaneuemedium';
+                font-family: 'helveticaneuemedium' !important;
                 font-size: 42px;
                 color: #fff;
                 position: relative;
@@ -59,7 +59,7 @@
 
             p {
                 color: #fff;
-                font-family: 'helveticaneuemedium';
+                font-family: 'helveticaneuemedium' !important;
                 padding: 0 20px;
                 font-size: 15px;
             }
@@ -71,7 +71,7 @@
     text-align: center;
 
     h3 {
-        font-family: 'helveticaneuemedium';
+        font-family: 'helveticaneuemedium' !important;
         color: #555555;
         font-size: 24px;
     }
@@ -121,7 +121,7 @@
                 span {
                     position: relative;
                     text-transform: uppercase;
-                    font-family: 'helveticaneuemedium';
+                    font-family: 'helveticaneuemedium' !important;
                     font-size: 16px;
                     color: #fff;
                     padding-top: 10px;
@@ -154,7 +154,7 @@
         }
 
         .md-title {
-            font-family: 'helveticaneuemedium';
+            font-family: 'helveticaneuemedium' !important;
             font-size: 25px;
             color: #fff;
             position: relative;
@@ -216,7 +216,7 @@
                 margin-right: 30px;
 
                 &:last-child {
-                    padding-top: 100px;
+                    padding-top: 50px;
 
                     @include device-1 {
                         padding-top: 0;
@@ -233,10 +233,11 @@
 
         div[class*='box-'] {
             display: table;
-            height: 260px;
+            height: 195px;
             width: 230px;
             border-radius: 5px;
             margin-bottom: 30px;
+            font-weight: bold;
 
             @include device-1 {
                 margin: 0 auto;
@@ -292,14 +293,13 @@
     .s-text {
         h3 {
             color: #555555;
-            font-family: 'helveticaneuemedium';
+            font-family: 'helveticaneuemedium' !important;
             font-size: 24px;
             margin: 20px 0;
         }
 
         p {
             font-size: 15px;
-            color: #b3b3b3;
             margin-bottom: 30px;
             max-width: 370px;
         }
@@ -329,6 +329,21 @@
 
 .solution-section {
     margin: 60px 0;
+    position: relative;
+
+    .vertical-arrow {
+        .swiper-button-prev {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .swiper-button-next {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
 }
 /*slide section*/
 %transition_all_03s {
@@ -341,7 +356,7 @@
 }
 
 .swiper-container {
-    width: 70%;
+    width: 67%;
     height: 600px;
     float: left;
     transition: opacity .6s ease, transform .3s ease;
@@ -352,8 +367,9 @@
     }
 
     &.nav-slider {
-        width: 30%;
+        width: 33%;
         padding-left: 25px;
+        padding-right: 10px;
 
         @include device-1 {
             display: none;
@@ -361,11 +377,19 @@
 
         .swiper-slide {
             cursor: pointer;
-            opacity: .4;
             transition: opacity .3s ease;
 
             &.swiper-slide-active {
-                opacity: 1;
+                background-color: #fff;
+                -webkit-box-shadow: 0px 0px 16px 2px rgba(148,148,148,1);
+                -moz-box-shadow: 0px 0px 16px 2px rgba(148,148,148,1);
+                box-shadow: 0px 0px 16px 2px rgba(148,148,148,1);
+
+                .content {
+                    p {
+                        color: #000;
+                    }
+                }
             }
 
             .content {
@@ -401,27 +425,28 @@
             width: 100%;
             color: #595959;
             text-align: center;
-            padding-bottom: 25px;
+            padding-bottom: 20px;
 
             .title {
-                font-size: 36px;
-                font-family: 'helveticaneuelight';
+                font-size: 30px;
+                font-family: 'helveticaneuelight' !important;
                 text-transform: uppercase;
                 margin-top: 30px;
                 margin-bottom: 10px;
 
                 span {
-                    font-family: 'helveticaneuemedium';
+                    font-family: 'helveticaneuemedium' !important;
                 }
             }
 
             .caption {
                 display: block;
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 1.4;
                 transform: translateX(50px);
                 opacity: 0;
                 transition: opacity .3s ease, transform .7s ease;
+                padding: 0 15px;
 
                 span {
                     display: block;
@@ -442,7 +467,7 @@
                 padding: 8px 27px;
                 border-radius: 30px;
                 background-color: #e1e1e1;
-                margin-top: 20px;
+                margin-top: 10px;
 
                 i {
                     font-size: 12px;
@@ -532,7 +557,7 @@
 
             p {
                 color: #808080;
-                font-family: 'helveticaneuemedium';
+                font-family: 'helveticaneuemedium' !important;
                 font-size: 18px;
                 margin: 0;
             }
