@@ -19,14 +19,20 @@ Version: 3.0
     /**/
 /*}*/
 .nav>li{
-    margin: 0 30px;
+    margin: 0 20px;
 }
 @media only screen and (max-width: 48em) {
 /*************** ADD MOBILE ONLY CSS HERE  ***************/
 
 
 }
+@font-face {
+    font-family: 'helveticaneue';
+    src: url("./fonts/helveticaneue.ttf") format("truetype"); }
 
+h1, h2, h3, h4, h5, h6,p,a, .heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a{
+    font-family: 'helveticaneue' !important;
+}
 .project-cetm > .col-inner > .row > .page-col {
 }
 
@@ -48,6 +54,9 @@ Version: 3.0
     .blog-left{
         padding-right: 60px;
     }
+    footer{
+        background-image: url("http://localhost/cetm/cetmSite/wp-content/themes/cetm-child/images/bgfoot.png") !important;
+    }
 }
 
 @media only screen and (max-width: 850px) {
@@ -58,6 +67,10 @@ Version: 3.0
     }
     .project-cetm > .col-inner > .row > .page-col > .col-inner {
         padding-top: 5px;
+    }
+    footer{
+        background-image: none;
+        background-color: #3c3d41 !important;
     }
 }
 .blog-left .wp-show-posts-image img{
@@ -94,6 +107,8 @@ a.wp-show-posts-read-more:hover, a.wp-show-posts-read-more:focus, a.wp-show-post
 .page-numbers{
     color: #777777;
 }
+
+
 .current{
     color: #44bbff;
     text-decoration: underline;
@@ -109,4 +124,26 @@ a.wp-show-posts-read-more:hover, a.wp-show-posts-read-more:focus, a.wp-show-post
 }
 .nav>li>a:hover{
     background-color: transparent;
+}
+footer{
+    padding-top: 250px;
+    background-color: #ffffff;
+    background-repeat:no-repeat;
+    background-position: bottom;
+}
+.flickity-page-dots .dot{
+    background-color: #e4b593;
+     border: none;
+}
+.slider-nav-light .flickity-page-dots .dot.is-selected{
+    background-color: #fda732;
+}
+footer > h3{
+    color: #FFFFFF !important;
+}
+.related-solution .pt-cv-thumbnail{
+     margin-bottom: 0px !important;
+}
+.footer-cetm > button{
+    margin-right: 0 !important;
 }
