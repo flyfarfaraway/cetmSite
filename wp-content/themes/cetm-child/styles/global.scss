@@ -1,7 +1,7 @@
 ﻿html, body {
     font-family: 'helveticaneue';
     color: #646464;
-    font-size:15px;
+    font-size: 15px;
 }
 
 .underline-menu {
@@ -233,4 +233,12 @@ label {
 .font-beba {
     font-family: 'utm_beba';
     font-weight: normal;
+}
+
+a.button {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
 }

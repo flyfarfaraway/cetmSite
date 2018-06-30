@@ -1,111 +1,250 @@
 footer {
-    background-color: #2d2c32;
-    padding: 25px 0;
-    color: #dfdfdf;
+    background-color: #003246;
 
     .logo {
+        max-width: 135px;
+        float: left;
+
         img {
-            max-width: 100%;
+            width: 100%;
         }
     }
 
-    h4 {
-        font-family: 'helveticaneuemedium';
-        color: #fff;
-        font-size: 16px;
-        margin-bottom: 15px;
-        margin-top: 30px;
-    }
-
-    p, a {
-        color: #dfdfdf;
-        font-size: 14px;
-        margin-bottom:10px;
-    }
-
-    a {
-        &:hover {
-            color: #df7b2f;
-            text-decoration: none;
-        }
-    }
-
-    h3 {
-        font-family: 'helveticaneuemedium';
-        font-size: 18px;
-        text-transform: uppercase;
-        margin-top: 40px;
-        margin-bottom: 25px;
-    }
-
-    ul {
+    .menu {
+        float: left;
         padding: 0;
         margin: 0;
-        list-style: none;
+        margin-top: 35px;
+        margin-left: 45px;
+
+        @include device {
+            margin: 0;
+        }
 
         li {
-            margin-bottom: 10px;
+            display: inline-block;
+            list-style: none;
+            margin: 0 15px;
+
+            @include device {
+                margin: 0 5px;
+            }
+
+            @include iphone5Landscape {
+                margin: 0 2px;
+            }
+
+            a {
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 12px;
+
+                @include device {
+                    font-size: 10px;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                    color: #fff;
+                    opacity: 0.85;
+                }
+            }
         }
     }
 
-    .cus-contact {
+    .social {
+        float: right;
         padding: 0;
-        margin-top: 40px;
-        padding-left:30px;
-        @include device-1 {
-            padding: 0 15px;
+        margin: 0;
+        margin-top: 22px;
+
+        @include device {
+            float: left;
         }
 
-        .form-group {
-            margin-bottom: 10px;
+        li {
+            display: inline-block;
+            list-style: none;
+            margin: 0 5px;
+
+            span {
+                color: #fff;
+                font-size: 13px;
+                text-transform: uppercase;
+            }
+
+            a {
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+                border: 1px solid #fff;
+                border-radius: 50%;
+                text-align: center;
+                color: #fff;
+                padding-top: 7px;
+
+                &:hover {
+                    text-decoration: none;
+                    background-color: #fff;
+                    color: #2791da;
+                    transition: all ease 0.15s;
+                }
+            }
+        }
+    }
+
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .img-qr {
+        float: left;
+
+        img {
+            max-width: 150px;
+        }
+    }
+
+    .company-info {
+        padding: 0;
+        margin: 0;
+        float: left;
+        list-style: none;
+        color: #fff;
+        font-size: 13px;
+        margin-left: 25px;
+
+        @include device {
+            margin-left: 15px;
+        }
+
+        li {
             position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+
+            &:first-child {
+                padding-left: 0;
+            }
 
             &:before {
                 content: "";
                 position: absolute;
-                top: 13px;
-                left: 15px;
-                width: 13px;
-                height: 13px;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
+                left: 0;
+                top: 2px;
+                font-family: "Font Awesome 5 Free";
             }
 
-            &.name {
+            &.adddress {
                 &:before {
-                    background-image: url('../images/ico_user.png');
+                    content: "\f041";
                 }
             }
 
             &.phone {
                 &:before {
-                    background-image: url('../images/ico_phone.PNG');
+                    content: "\f095";
+                    font-weight:700;
                 }
             }
 
             &.email {
                 &:before {
-                    background-image: url('../images/ico_mail.PNG');
+                    content: "\f0e0";
                 }
             }
         }
 
-        .form-control {
-            height: 40px;
-            border-radius: 7px;
-            color: #808080;
-            padding-left: 35px;
+        h3 {
+            font-size: 13px;
+            text-transform: uppercase;
+            margin-top: 0;
 
-            &:focus {
-                border-color: #e57e2f;
-                outline: 0;
-                -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(229,126,47,.6);
-                box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(229,126,47,.6);
+            @include device() {
+                line-height: 21px;
             }
         }
     }
-    .widget{
-        margin-bottom:0;
+
+    .app-info {
+        float: right;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        @include device {
+            float: left;
+            margin-left: 15px;
+            margin-top: 20px;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #fff;
+            font-size: 13px;
+        }
+    }
+
+    .copyright {
+        margin-top: 25px;
+        background-color: #0f3c4e;
+        text-align: center;
+        min-height: 36px;
+        padding-top: 10px;
+
+        p {
+            color: #fff;
+            font-size: 12px;
+        }
+    }
+
+    .email-form {
+        position: relative;
+
+        input {
+            padding-left: 10px;
+            padding-right: 32px;
+        }
+
+        &:after {
+            content: "\f0e0";
+            font-family: "Font Awesome 5 Free";
+            width: 28px;
+            height: 28px;
+            background-color: #48b0f8;
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            border-radius: 50%;
+            text-align: center;
+            padding-top: 4px;
+            padding-left: 2px;
+            color: #fff;
+            border-radius: 50%;
+        }
+    }
+
+    .control-round {
+        width: 100%;
+        border-radius: 30px;
+        height: 34px;
+        color: #6c6c6c;
+        font-size: 16px;
+        border: 1px solid #fff;
+
+        &:hover,
+        &:active,
+        &:focus {
+            border-color: #a2d6fa;
+            transition: all ease 0.2s;
+        }
     }
 }
