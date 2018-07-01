@@ -131,11 +131,27 @@
             float: left;
         }
     }
+
+    &.ul-white {
+        li {
+            &:before {
+                background-color: #fff;
+            }
+        }
+    }
+
+    &.ul-black {
+        li {
+            &:before {
+                background-color: #333;
+            }
+        }
+    }
 }
 
 .buble-box {
     position: relative;
-    background: #88b7d5;
+    background: #dbebff;
     text-align: center;
 
     &:after {
@@ -148,7 +164,7 @@
         position: absolute;
         pointer-events: none;
         border-color: rgba(136, 183, 213, 0);
-        border-bottom-color: #88b7d5;
+        border-bottom-color: #dbebff;
         border-width: 9px;
     }
 
@@ -157,7 +173,7 @@
             bottom: 0;
             top: 100%;
             border-color: rgba(136, 183, 213, 0);
-            border-top-color: #88b7d5;
+            border-top-color: #dbebff;
             border-width: 9px;
         }
     }
@@ -175,6 +191,72 @@
 
     &.box-esclip {
         border-radius: 50%;
+
+        &:after {
+            left: 50%;
+            right: 50%;
+            margin-top: -1px;
+        }
+    }
+
+    &.color-1 {
+        background-color: #ececec;
+
+        &:after {
+            border-bottom-color: #ececec;
+        }
+
+        &.bottom-arrow {
+            &:after {
+                border-color: rgba(136, 183, 213, 0);
+                border-top-color: #ececec;
+            }
+        }
+    }
+
+    &.color-2 {
+        background-color: #ffebd8;
+
+        &:after {
+            border-bottom-color: #ffebd8;
+        }
+
+        &.bottom-arrow {
+            &:after {
+                border-color: rgba(136, 183, 213, 0);
+                border-top-color: #ffebd8;
+            }
+        }
+    }
+
+    &.color-3 {
+        background-color: #ffe2e2;
+
+        &:after {
+            border-bottom-color: #ffe2e2;
+        }
+
+        &.bottom-arrow {
+            &:after {
+                border-color: rgba(136, 183, 213, 0);
+                border-top-color: #ffe2e2;
+            }
+        }
+    }
+
+    &.color-4 {
+        background-color: #f0deff;
+
+        &:after {
+            border-bottom-color: #f0deff;
+        }
+
+        &.bottom-arrow {
+            &:after {
+                border-color: rgba(136, 183, 213, 0);
+                border-top-color: #f0deff;
+            }
+        }
     }
 }
 

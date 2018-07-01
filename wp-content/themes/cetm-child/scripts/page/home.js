@@ -105,7 +105,7 @@ function slickOnMobile(element) {
           {
               breakpoint: 768,
               settings: {
-                  arrows: false,
+                  arrows: true,
                   centerPadding: '0px',
                   slidesToShow: 1
               }

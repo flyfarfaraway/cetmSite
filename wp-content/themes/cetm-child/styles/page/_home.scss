@@ -433,6 +433,10 @@
                 margin-top: 30px;
                 margin-bottom: 10px;
 
+                @include device() {
+                    line-height: 30px;
+                }
+
                 span {
                     font-family: 'helveticaneuemedium' !important;
                 }
