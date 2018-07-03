@@ -95,10 +95,6 @@
             cursor: pointer;
             background-size: cover;
 
-            &.active {
-                width: 33.33333334%;
-            }
-
             &:after {
                 content: "";
                 width: 100%;
@@ -109,6 +105,15 @@
                 background-color: rgba(0,0,0,0.5);
                 z-index: 2;
             }
+
+            &.active {
+                width: 33.33333334%;
+
+                &:after {
+                    opacity: 0;
+                }
+            }
+
 
             label {
                 position: absolute;
@@ -313,13 +318,14 @@
                 padding-left: 30px;
 
                 &:before {
-                    content: "";
+                    content: "\f058";
+                    font-family: "Font Awesome 5 Free";
+                    color: #4b98ce;
                     position: absolute;
                     left: 0;
-                    top: 50%;
-                    width: 15px;
-                    height: 3px;
-                    background-color: #81a9db;
+                    top: 3px;
+                    font-weight: 700;
+                    font-size: 15px;
                 }
             }
         }
@@ -432,6 +438,10 @@
                 text-transform: uppercase;
                 margin-top: 30px;
                 margin-bottom: 10px;
+
+                @include device() {
+                    line-height: 30px;
+                }
 
                 span {
                     font-family: 'helveticaneuemedium' !important;
@@ -559,6 +569,7 @@
                 font-family: 'helveticaneuemedium' !important;
                 font-size: 18px;
                 margin: 0;
+                padding-right: 35px;
             }
         }
 

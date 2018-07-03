@@ -1,7 +1,16 @@
-﻿.img-banner{
-    text-align:center;
-    img{
-        display:inline;
-        max-width:1000px;
+﻿.img-banner {
+    text-align: center;
+
+    img {
+        display: inline;
+        max-width: 1000px;
     }
+}
+
+.flickity-prev-next-button.previous {
+    left: -15px !important;
+}
+
+.flickity-prev-next-button.next {
+    right: -15px !important;
 }

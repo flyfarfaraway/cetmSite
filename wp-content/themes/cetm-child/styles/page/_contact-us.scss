@@ -1,4 +1,8 @@
 ﻿.contact-us {
+    @include device() {
+        padding-top: 100px;
+    }
+
     .c-banner {
         height: 400px;
         position: relative;
@@ -6,22 +10,25 @@
         width: 100%;
         margin-bottom: 10px;
 
+        @include device() {
+            display: none;
+        }
+
         .banner-blur {
-            /*background-image: url(../../images/bg_2.jpg);*/
-            background-image: url('../../images/contact_bn.jpg');
+            background-image: url(http://miraway-cetm.com/wp-content/uploads/2018/07/contact_bn.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: 0px -700px;
-            position: fixed;
+            position: absolute;
             height: 450px;
             width: 100%;
-            z-index: -1;
+            z-index: 0;
             top: 0;
             left: 0;
             pointer-events: none;
             /*filter: blur(2px);
             -webkit-filter: blur(2px);*/
-            @include xlg(){
+            @include xlg() {
                 background-position: 0px -900px;
             }
         }
@@ -32,6 +39,7 @@
             vertical-align: middle;
             text-align: center;
             z-index: 2;
+            position: relative;
 
             h3 {
                 font-family: 'helveticaneuelight' !important;
@@ -41,6 +49,7 @@
                 text-transform: uppercase;
                 position: relative;
                 margin-bottom: 20px;
+                font-weight: normal;
             }
 
             p {
@@ -54,6 +63,12 @@
         margin-top: -90px;
         background-color: #fff;
         padding: 60px 80px;
+        position: relative;
+
+        @include device() {
+            margin-top: 0;
+            padding: 0 15px;
+        }
     }
 
     .nav-tabs {
@@ -68,6 +83,12 @@
             margin-bottom: -1px;
             margin-right: 30px;
 
+            @include device() {
+                width: 49%;
+                margin: 0;
+                text-align: center;
+            }
+
             .avatar_tab {
                 width: 65px;
                 height: 70px;
@@ -76,6 +97,10 @@
                 background-color: rgba(143,143,143,1);
                 background-position: center;
                 background-repeat: no-repeat;
+
+                @include device() {
+                    display: inline-block;
+                }
             }
 
             a {
@@ -85,9 +110,14 @@
                 border: 1px solid transparent;
                 border-radius: 4px 4px 0 0;
                 text-decoration: none !important;
+                background-color: transparent;
             }
 
             &.active {
+                a {
+                    border-color: transparent !important;
+                }
+
                 .avatar_tab {
                     background-color: #4b98ce;
                 }
@@ -103,16 +133,17 @@
 
     .contact-text {
         label {
-            font-family: 'helveticaneuemedium';
+            font-family: 'helveticaneuemedium' !important;
         }
     }
 
     .overview {
         h2 {
-            font-family: 'helveticaneuelight';
+            font-family: 'helveticaneuelight' !important;
             color: #333;
             font-size: 30px;
             margin-bottom: 20px;
+            font-weight: normal;
         }
 
         .list-contact {
@@ -120,10 +151,14 @@
             padding: 0;
             margin: 0;
 
+            @include device() {
+                display: none;
+            }
+
             li {
                 width: 50%;
                 float: left;
-                min-height: 115px;
+                min-height: 135px;
                 font-size: 14px;
 
                 &:nth-child(1),
@@ -144,9 +179,10 @@
 
                         &:first-child {
                             text-transform: uppercase;
-                            font-family: 'helveticaneuelight';
+                            font-family: 'helveticaneuelight' !important;
                             font-size: 16px;
                             margin: 5px 0;
+                            font-weight: normal;
                         }
 
                         a {
@@ -175,8 +211,14 @@
         box-shadow: 0px 0px 33px 0px rgba(143,143,143,1);
         padding: 80px 60px;
 
+        @include device() {
+            padding: 0 15px;
+            box-shadow: none;
+        }
+
         h3 {
-            font-family: 'helveticaneuelight';
+            font-family: 'helveticaneuelight' !important;
+            font-weight: normal;
             color: #4b98ce;
             font-size: 38px;
             margin-top: 0;
@@ -204,13 +246,20 @@
             }
         }
 
+        textarea.form-control {
+            min-height: 20px;
+        }
+
         .button-submit {
             background-color: #4b98ce;
             color: #fff;
             border-radius: 20px;
             border: 1px solid #4b98ce;
-            padding: 10px 34px;
+            padding: 3px 26px;
             transition: all ease 0.2s;
+            font-size: 14px;
+            font-weight: normal;
+            text-transform: unset;
 
             &:hover {
                 opacity: 0.8;

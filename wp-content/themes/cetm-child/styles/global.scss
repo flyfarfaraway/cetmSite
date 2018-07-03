@@ -231,8 +231,8 @@ label {
 }
 
 .font-beba {
-    font-family: 'utm_beba';
-    font-weight: normal;
+    font-family: 'utm_beba' !important;
+    font-weight: normal !important;
 }
 
 a.button {
@@ -240,5 +240,13 @@ a.button {
 
     &:hover {
         text-decoration: none;
+    }
+}
+
+/*fix bug banner*/
+.text-box.banner-layer {
+    @include device() {
+        width: 100% !important;
+        padding: 0 15px;
     }
 }
