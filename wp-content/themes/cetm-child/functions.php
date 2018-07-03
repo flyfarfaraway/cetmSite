@@ -3,11 +3,12 @@
 
 function cetm_scripts()
 {
-    wp_enqueue_style('styles', get_stylesheet_directory_uri() . '/styles/styles.css', array(), '');
+
     wp_enqueue_style('style', get_stylesheet_directory_uri() . '/style.css', array(), '');
     wp_enqueue_style('bootstrap', get_stylesheet_directory_uri() . '/styles/bootstrap.css', array(), '');
     wp_enqueue_style('swiper', get_stylesheet_directory_uri() . '/styles/lib/swiper.css', array(), '');
     wp_enqueue_style('fontawesome', get_stylesheet_directory_uri() . '/styles/fontawesome-all.css', array(), '');
+    wp_enqueue_style('styles', get_stylesheet_directory_uri() . '/styles/styles.css', array(), '');
 
     if (!is_user_logged_in() && is_front_page()) {
         wp_enqueue_script('jqueryjs', get_stylesheet_directory_uri() . '/scripts/jquery.js', array(), '');

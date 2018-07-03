@@ -9,30 +9,30 @@ Version: 3.0
 /*************** ADD CUSTOM CSS HERE.   ***************/
 
 /*.header-search{*/
-    /*display: none !important*/
+/*display: none !important*/
 /*}*/
 /*.header-nav >.header-divider {*/
-    /*display: none*/
+/*display: none*/
 /*}*/
 /*.cart-item,.account-item {*/
-    /*display: none !important*/
-    /**/
+/*display: none !important*/
+/**/
 /*}*/
-.nav>li{
-    margin: 0 20px;
-}
+
 @media only screen and (max-width: 48em) {
-/*************** ADD MOBILE ONLY CSS HERE  ***************/
-
+    /*************** ADD MOBILE ONLY CSS HERE  ***************/
 
 }
+
 @font-face {
     font-family: 'helveticaneue';
-    src: url("./fonts/helveticaneue.ttf") format("truetype"); }
+    src: url("./fonts/helveticaneue.ttf") format("truetype");
+}
 
-h1, h2, h3, h4, h5, h6,p,a, .heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a{
+h1, h2, h3, h4, h5, h6, p, a, .heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a {
     font-family: 'helveticaneue' !important;
 }
+
 .project-cetm > .col-inner > .row > .page-col {
 }
 
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6,p,a, .heading-font, .off-canvas-center .nav-sidebar.nav-v
 }
 
 @media only screen and (min-width: 850px) {
-    /*************** ADD MOBILE ONLY CSS HERE  ***************/
+    /*************** ADD DESKTOP ONLY CSS HERE  ***************/
     .project-cetm > .col-inner > .row > .page-col {
         padding: 5px 2px;
         margin-right: 0px;
@@ -51,99 +51,157 @@ h1, h2, h3, h4, h5, h6,p,a, .heading-font, .off-canvas-center .nav-sidebar.nav-v
     .project-cetm > .col-inner > .row > .page-col > .col-inner {
         padding: 10px 5px;
     }
-    .blog-left{
+
+    .blog-left {
         padding-right: 60px;
     }
-    footer{
-        background-image: url("http://localhost/cetm/cetmSite/wp-content/themes/cetm-child/images/bgfoot.png") !important;
+    .blog-single .post-sidebar {
+        border-left: none !important;
+        padding-left: 0;
     }
+    .nav > li {
+        margin: 0 20px;
+    }
+
 }
 
 @media only screen and (max-width: 850px) {
-    /*************** ADD DESKTOP ONLY CSS HERE  ***************/
-
+    /*************** ADD MOBILE ONLY CSS HERE  ***************/
     .project-cetm > .col-inner > .row > .page-col {
         padding: 5px;
     }
+
     .project-cetm > .col-inner > .row > .page-col > .col-inner {
         padding-top: 5px;
     }
-    footer{
-        background-image: none;
-        background-color: #3c3d41 !important;
+    .nav>li>a>i.icon-menu {
+        color: #333a41;
+    }
+    .stuck>.nav>li>a>i.icon-menu{
+        color: #333a41;
+    }
+    .blog-right .wp-show-posts-image{
+        float: left;
+    }
+    .blog-right .wp-show-posts-entry-header{
+        float: left;
+        width: 60%;
+        margin-left: 15px;
     }
 }
-.blog-left .wp-show-posts-image img{
+
+.blog-left .wp-show-posts-image img {
     width: 100% !important;
 }
-.blog-left .wp-show-posts-entry-header{
-    margin-bottom: 30px;
+
+.blog-left .wp-show-posts-entry-header {
+    margin-bottom: 20px;
+    color: #e57e2f;
+
 }
-.blog-left  .wp-show-posts-single{
+
+.blog-left .wp-show-posts-single {
     border-bottom: 1px solid #6666;
     padding-bottom: 30px;
     margin-bottom: 45px;
 }
-.blog-right .wp-show-posts-entry-header{
-    height: 48px;
+
+.blog-single .wp-show-posts-entry-header, .blog-right .wp-show-posts-entry-header {
+    height: 100px;
     overflow: hidden;
     margin-bottom: 10px;
 }
-a.wp-show-posts-read-more{
-    border: 2px solid #10819b;
-    font-size: 14px;
-}
+
 a.wp-show-posts-read-more:hover, a.wp-show-posts-read-more:focus, a.wp-show-posts-read-more:visited {
-    border: 2px solid transparent;
-    color: #fff;
-    background: #10819b;
+    border: none;
+    font-size: 16px;
+    color: #4b98ce;
+    background: transparent;
     text-decoration: none;
+    padding: 0;
+
 }
-.wpsp-load-more{
+
+.wpsp-load-more {
     text-align: center;
     font-size: 16px;
     font-weight: 700;
 }
-.page-numbers{
+
+.page-numbers {
     color: #777777;
 }
 
-
-.current{
+.current {
     color: #44bbff;
     text-decoration: underline;
 
 }
-.blog-right .wp-show-posts-single{
+
+.blog-single .wp-show-posts-single , .blog-right .wp-show-posts-single {
     margin-bottom: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid #6666;
 }
-.wp-show-posts-entry-title a{
-    color: #424242;
+
+.blog-right > .wp-show-posts-entry-header > .wp-show-posts-entry-title > a {
+    color: #424242 !important;
 }
-.nav>li>a:hover{
+
+.nav > li > a:hover {
     background-color: transparent;
 }
-footer{
-    padding-top: 250px;
-    background-color: #ffffff;
-    background-repeat:no-repeat;
-    background-position: bottom;
-}
-.flickity-page-dots .dot{
+
+.flickity-page-dots .dot {
     background-color: #e4b593;
-     border: none;
+    border: none;
 }
-.slider-nav-light .flickity-page-dots .dot.is-selected{
+
+.slider-nav-light .flickity-page-dots .dot.is-selected {
     background-color: #fda732;
 }
-footer > h3{
-    color: #FFFFFF !important;
+
+.related-solution .pt-cv-thumbnail {
+    margin-bottom: 0px !important;
 }
-.related-solution .pt-cv-thumbnail{
-     margin-bottom: 0px !important;
+
+a.wp-show-posts-read-more {
+    border: none !important;
+    font-size: 16px;
+    color: #4b98ce;
+    padding: 0;
 }
-.footer-cetm > button{
-    margin-right: 0 !important;
+
+.wp-show-posts-entry-title > a {
+    color: #666;;
+}
+
+.blog-single {
+    padding-top: 120px;
+}
+
+
+.blog-single .entry-category, .blog-single .entry-meta, .blog-single .blog-share, .blog-single .entry-author, .blog-single .navigation-post, .blog-single .comments-area {
+    display: none;
+}
+
+.blog-single .badge {
+    left: -47px;
+    top: 0;
+    border-radius: 50px;
+    background-color: #e57e2f;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.blog-single .badge .badge-inner {
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+}
+.flickity-viewport {
+    min-height: 250px !important;
 }
