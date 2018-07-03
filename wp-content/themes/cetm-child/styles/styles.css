@@ -320,6 +320,8 @@ footer {
       @media screen and (max-width: 1024px) {
         footer .company-info h3 {
           line-height: 21px; } }
+    footer .company-info a {
+      color: #fff; }
   footer .app-info {
     float: right;
     padding: 0;
@@ -456,8 +458,6 @@ footer {
     position: relative;
     cursor: pointer;
     background-size: cover; }
-    .activity .list .item.active {
-      width: 33.33333334%; }
     .activity .list .item:after {
       content: "";
       width: 100%;
@@ -467,6 +467,10 @@ footer {
       left: 0;
       background-color: rgba(0, 0, 0, 0.5);
       z-index: 2; }
+    .activity .list .item.active {
+      width: 33.33333334%; }
+      .activity .list .item.active:after {
+        opacity: 0; }
     .activity .list .item label {
       position: absolute;
       bottom: 20px;
@@ -604,13 +608,14 @@ footer {
       position: relative;
       padding-left: 30px; }
       .strong-section .s-text ul li:before {
-        content: "";
+        content: "\f058";
+        font-family: "Font Awesome 5 Free";
+        color: #4b98ce;
         position: absolute;
         left: 0;
-        top: 50%;
-        width: 15px;
-        height: 3px;
-        background-color: #81a9db; }
+        top: 3px;
+        font-weight: 700;
+        font-size: 15px; }
 
 .solution-section {
   margin: 60px 0;
@@ -775,7 +780,8 @@ footer {
       color: #808080;
       font-family: 'helveticaneuemedium' !important;
       font-size: 18px;
-      margin: 0; }
+      margin: 0;
+      padding-right: 35px; }
   .nav-slider .swiper-slide i {
     position: absolute;
     top: 35px;
@@ -783,18 +789,25 @@ footer {
     .nav-slider .swiper-slide i img {
       max-width: 30px; }
 
+@media screen and (max-width: 1024px) {
+  .contact-us {
+    padding-top: 100px; } }
+
 .contact-us .c-banner {
   height: 400px;
   position: relative;
   display: table;
   width: 100%;
   margin-bottom: 10px; }
+  @media screen and (max-width: 1024px) {
+    .contact-us .c-banner {
+      display: none; } }
   .contact-us .c-banner .banner-blur {
     background-image: url(http://miraway-cetm.com/wp-content/uploads/2018/07/contact_bn.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0px -700px;
-    position: fixed;
+    position: absolute;
     height: 450px;
     width: 100%;
     z-index: 0;
@@ -831,6 +844,10 @@ footer {
   background-color: #fff;
   padding: 60px 80px;
   position: relative; }
+  @media screen and (max-width: 1024px) {
+    .contact-us .c-cotainer {
+      margin-top: 0;
+      padding: 0 15px; } }
 
 .contact-us .nav-tabs {
   margin-bottom: 0;
@@ -842,6 +859,11 @@ footer {
     float: left;
     margin-bottom: -1px;
     margin-right: 30px; }
+    @media screen and (max-width: 1024px) {
+      .contact-us .nav-tabs > li {
+        width: 49%;
+        margin: 0;
+        text-align: center; } }
     .contact-us .nav-tabs > li .avatar_tab {
       width: 65px;
       height: 70px;
@@ -850,6 +872,9 @@ footer {
       background-color: #8f8f8f;
       background-position: center;
       background-repeat: no-repeat; }
+      @media screen and (max-width: 1024px) {
+        .contact-us .nav-tabs > li .avatar_tab {
+          display: inline-block; } }
     .contact-us .nav-tabs > li a {
       position: relative;
       display: block;
@@ -880,10 +905,13 @@ footer {
   list-style: none;
   padding: 0;
   margin: 0; }
+  @media screen and (max-width: 1024px) {
+    .contact-us .overview .list-contact {
+      display: none; } }
   .contact-us .overview .list-contact li {
     width: 50%;
     float: left;
-    min-height: 115px;
+    min-height: 135px;
     font-size: 14px; }
     .contact-us .overview .list-contact li:nth-child(1), .contact-us .overview .list-contact li:nth-child(3) {
       padding-right: 20px; }
@@ -914,6 +942,10 @@ footer {
   -moz-box-shadow: 0px 0px 33px 0px #8f8f8f;
   box-shadow: 0px 0px 33px 0px #8f8f8f;
   padding: 80px 60px; }
+  @media screen and (max-width: 1024px) {
+    .contact-us .send-us-pop {
+      padding: 0 15px;
+      box-shadow: none; } }
   .contact-us .send-us-pop h3 {
     font-family: 'helveticaneuelight' !important;
     font-weight: normal;
@@ -1185,6 +1217,12 @@ a.button {
   .img-banner img {
     display: inline;
     max-width: 1000px; }
+
+.flickity-prev-next-button.previous {
+  left: -15px !important; }
+
+.flickity-prev-next-button.next {
+  right: -15px !important; }
 
 /* Slider */
 .slick-loading .slick-list {

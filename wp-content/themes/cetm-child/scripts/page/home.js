@@ -7,6 +7,9 @@
 });
 function initSwiper() {
     // Params
+    if ($('.swiper-container').length < 1) {
+        return
+    }
     let mainSliderSelector = '.main-slider',
         navSliderSelector = '.nav-slider',
         interleaveOffset = 0.5;
